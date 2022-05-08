@@ -1,13 +1,15 @@
+import { Box } from '@mui/system'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.main} >
+      <Box sx={{width:'100vw', position:'relative', backgroundImage:"url('/bg.png')",minHeight:'200vh',backgroundRepeat:'no-repeat',backgroundSize:'100%'}} >
+      <Box sx={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',}} >
 
-    </div>
+      </Box>
+      </Box>
   )
 }
 

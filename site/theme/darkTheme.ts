@@ -6,7 +6,12 @@ declare module '@mui/material/Paper' {
       window: true;
     }
 }
-  
+
+declare module '@mui/material/Button' {
+    interface ButtonPropsVariantOverrides {
+      focusedText: true;
+    }
+}
 
 const darkTheme = createTheme({
     typography:{
@@ -14,6 +19,9 @@ const darkTheme = createTheme({
     },
     palette:{
         mode:'dark',
+        primary:{
+            dark:colorPalette.darkest, main:colorPalette.main, light:colorPalette.lightest
+        }
     },
     components:{
         MuiPaper:{
@@ -26,7 +34,34 @@ const darkTheme = createTheme({
                 {
                     props:{variant:'window'},
                     style:{
-                        backgroundColor:colorPalette.darkest, minHeight:'100vh',width:'100vw',overflowX:'hidden'
+                        backgroundColor:colorPalette.darkest, minHeight:'100vh',width:'100vw',
+                        overflowX:'hidden' 
+                    
+                    }
+                }
+            ]
+        },
+        MuiAppBar:{
+            styleOverrides:{
+                root:{
+                    background:colorPalette.darkest
+                }
+            }
+        },
+        MuiButton:{
+            styleOverrides:{
+                root:{
+                    textTransform:'none', color:colorPalette.dark,
+                    "&:hover":{color:colorPalette.light, textShadow:'0px 4px 30px #FFFFFF'}
+                }
+            },
+            variants:[
+                {
+                    props:{variant:'focusedText'},
+                    style:{
+                        textDecoration:'underline',color:colorPalette.light,
+                        textShadow:'0px 4px 30px #FFFFFF',
+                        "&:hover":{textDecoration:'underline'}
                     }
                 }
             ]

@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import {ThemeProvider} from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import lightTheme from "../theme/lightTheme";
+import darkTheme from "../theme/darkTheme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

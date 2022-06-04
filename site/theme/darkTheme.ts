@@ -8,12 +8,12 @@ declare module '@mui/material/Paper' {
 }
   
 
-const lightTheme = createTheme({
+const darkTheme = createTheme({
     typography:{
         fontFamily:"Mulish"
     },
     palette:{
-        mode:'light',
+        mode:'dark',
     },
     components:{
         MuiPaper:{
@@ -26,7 +26,7 @@ const lightTheme = createTheme({
                 {
                     props:{variant:'window'},
                     style:{
-                        backgroundColor:colorPalette.lightest, minHeight:'100vh',width:'100vw',overflowX:'hidden'
+                        backgroundColor:colorPalette.darkest, minHeight:'100vh',width:'100vw',overflowX:'hidden'
                     }
                 }
             ]
@@ -34,4 +34,4 @@ const lightTheme = createTheme({
     }
 });
 
-export default lightTheme;
+export default darkTheme;

@@ -5,8 +5,9 @@ import { ThemeProvider } from "next-themes";
 function Context({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
-      defaultTheme={"dark"}
+      defaultTheme="light"
       themes={["light", "dark"]}
+      enableColorScheme
       enableSystem
     >
       {children}

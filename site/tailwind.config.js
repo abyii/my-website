@@ -4,6 +4,10 @@ const primaryHue = 0;
 const secondaryHue = 170;
 
 module.exports = {
+  darkMode: "class",
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -60,5 +64,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-bg-patterns")],
 };

@@ -12,23 +12,23 @@ export default () => {
         target="_blank"
         href={"https://www.linkedin.com/in/abhishek-y-71743b202/"}
       >
-        <IconButton variant="standard">
-          <LinkedInLogo />
+        <IconButton variant="text">
+          <LinkedInLogo className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
       <Link target="_blank" href={"https://github.com/abhishek-yanjarappa"}>
-        <IconButton variant="standard">
-          <GitHubIcon />
+        <IconButton variant="text">
+          <GitHubIcon className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
       <Link target="_blank" href={"https://twitter.com/@_abhyi"}>
-        <IconButton variant="standard">
-          <TwitterIcon />
+        <IconButton variant="text">
+          <TwitterIcon className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
       <Link target="_blank" href={"mailto:abhishekyanjarappa@gmail.com"}>
-        <IconButton variant="standard">
-          <EmailIcon />
+        <IconButton variant="text">
+          <EmailIcon className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
     </>

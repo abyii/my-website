@@ -2,7 +2,6 @@
 @tailwind components;
 
 * {
-  font-family: var(--font-ibm-sans);
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }

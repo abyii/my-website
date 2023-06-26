@@ -1,7 +1,10 @@
 export default () => {
   return (
-    <div className="w-full flex justify-center bg-p-10 dark:bg-p-0">
-      <div className="max-w-4xl w-full p-10 font-mono text-sm italic dark:font-light text-p-0 dark:text-p-7">
+    <div
+      className="w-full flex justify-center pattern-dots pattern-opacity-100 pattern-p-9 dark:pattern-p-1 pattern-bg-p-10 dark:pattern-bg-p-0 
+  pattern-size-4"
+    >
+      <div className="max-w-4xl w-full px-10 py-20 font-mono text-sm italic dark:font-light text-p-0 dark:text-p-7">
         <p>
           <span className="not-italic font-semibold">ನಮಸ್ಕಾರ.</span> My name is
           Abhishek, I'm a 20 y.o He/Him and I like crafting digital

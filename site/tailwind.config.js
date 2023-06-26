@@ -49,7 +49,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Mulish", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
       serif: ["Playfair Display", "serif"],
       mono: ["Spline Sans Mono", "monospace"],
     },
@@ -58,11 +58,14 @@ module.exports = {
         max: "100",
       },
       fontFamily: {
-        sans: ["var(--font-mulish-sans)"],
+        sans: ["var(--font-inter)"],
         serif: ["var(--font-playfair-serif)"],
         mono: ["var(--font-spline-mono)"],
       },
     },
   },
-  plugins: [require("tailwindcss-bg-patterns")],
+  plugins: [
+    require("tailwindcss-bg-patterns"),
+    require("@tailwindcss/typography"),
+  ],
 };

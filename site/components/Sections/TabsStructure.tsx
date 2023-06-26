@@ -8,7 +8,7 @@ import {
 import { useReducer } from "react";
 import Showcase from "./TabContents/Showcase";
 
-const tabVals = ["Showcase", "Thoughts", "Photography"] as const;
+const tabVals = ["Showcase", "Writing", "Photography"] as const;
 const directions = ["right", "left", "none"] as const;
 
 type ActiveTab = {
@@ -52,7 +52,7 @@ export default () => {
   } as ActiveTab);
   return (
     <div className="w-full bg-p-9 dark:bg-p-1 flex justify-center">
-      <div className="w-full max-w-4xl p-10">
+      <div className="w-full max-w-4xl p-5 md:p-10">
         <Tabs
           defaultValue="account"
           value={activeTab.value}

@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Mulish, Playfair_Display, Spline_Sans_Mono } from "next/font/google";
+import { Inter, Playfair_Display, Spline_Sans_Mono } from "next/font/google";
 import Context from "@abhyi/components/Context";
 
-const sans = Mulish({
-  variable: "--font-mulish-sans",
+const sans = Inter({
+  variable: "--font-inter",
   subsets: ["latin-ext"],
 });
 const serif = Playfair_Display({

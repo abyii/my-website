@@ -50,7 +50,6 @@ const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   TabsContentProps
 >(({ className, children, direction, magnitude, ...props }, ref) => {
-  console.log(props);
   return (
     <TabsPrimitive.Content
       ref={ref}
@@ -59,7 +58,7 @@ const TabsContent = React.forwardRef<
     >
       <motion.div
         initial={{
-          opacity: 0.1,
+          opacity: direction == "none" ? 1 : 0.2,
           translateX:
             direction === "left"
               ? magnitude * 10

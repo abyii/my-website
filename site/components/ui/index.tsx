@@ -1,4 +1,4 @@
 export * from "./Window";
 export * from "./Buttons";
-export * from "./Tabs";
-export * from "./Card";
+export { Tabs, TabsContent, TabsList, TabsTrigger } from "./Tabs";
+export { Card } from "./Card";

@@ -1,12 +1,16 @@
 import { Window } from "@abhyi/components/ui";
 import Mdx from "./marvel.mdx";
+import { AppBar } from "@abhyi/components/ui/AppBar";
 
 export default function page() {
   return (
-    <Window className="flex justify-center bg-p-10 dark:bg-p-1">
-      <div className="w-full h-full py-52 prose prose-headings:font-semibold prose-p:font-normal ">
-        <Mdx />
-      </div>
-    </Window>
+    <>
+      <Window className="flex flex-col items-center bg-p-9 dark:bg-p-1">
+        <AppBar />
+        <div className="w-full h-full py-52 prose prose-zinc dark:prose-invert prose-headings:font-semibold">
+          <Mdx />
+        </div>
+      </Window>
+    </>
   );
 }

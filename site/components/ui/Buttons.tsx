@@ -53,6 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
             variant === "text",
         }
       )}
+      {...props}
     >
       {Left ? (
         <Left
@@ -136,6 +137,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
           "underline hover:bg-p-9 hover:dark:bg-p-1": variant === "text",
         }
       )}
+      {...props}
     >
       {children}
     </button>

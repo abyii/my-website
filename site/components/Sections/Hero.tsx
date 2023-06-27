@@ -16,7 +16,7 @@ export default () => {
           <span className="text-p-5">Yanjarappa</span>
         </h1>
         {/* caption */}
-        <p className="text-p-0 dark:text-p-10 self-end text-sm dark:font-thin mt-[90px] md:mt-12">
+        <p className="text-p-0 dark:text-p-10 self-end text-sm dark:font-extralight mt-[90px] md:mt-12">
           Developer and Designer
           <br />
           based in Bengaluru.

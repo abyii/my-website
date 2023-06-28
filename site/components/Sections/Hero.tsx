@@ -10,13 +10,13 @@ export default () => {
           <SocialIconArray />
         </div>
         {/* name */}
-        <h1 className="text-4xl font-light dark:font-extralight mt-12 md:mt-0">
+        <h1 className="text-4xl font-light mt-12 md:mt-0">
           <span className="text-p-0 dark:text-p-9">Abhishek</span>
           <br />
           <span className="text-p-5">Yanjarappa</span>
         </h1>
         {/* caption */}
-        <p className="text-p-0 dark:text-p-10 self-end text-sm dark:font-extralight mt-[90px] md:mt-12">
+        <p className="text-p-0 dark:text-p-10 self-end text-sm dark:font-light mt-[90px] md:mt-12">
           Developer and Designer
           <br />
           based in Bengaluru.

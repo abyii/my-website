@@ -10,7 +10,7 @@ import clsx from "clsx";
 export const AppBar: React.FC<JSX.IntrinsicElements["nav"]> = () => {
   const theme = useTheme();
   return (
-    <motion.div className="w-full flex justify-center p-5 fixed top-0">
+    <motion.div className="w-full flex justify-center p-5 fixed top-0 bg-gradient-to-b from-p-9 dark:from-p-1 to-transparent ">
       <nav
         className={clsx(
           "flex justify-between items-center rounded-md w-full max-w-3xl shadow-md active:shadow dark:shadow-lg",

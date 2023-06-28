@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -53,5 +54,3 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(98, 98, 98);
 }
-
-@tailwind utilities;

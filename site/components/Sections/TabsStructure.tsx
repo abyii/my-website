@@ -52,7 +52,7 @@ export default () => {
   } as ActiveTab);
   return (
     <div className="w-full bg-p-9 dark:bg-p-1 flex justify-center">
-      <div className="w-full max-w-4xl p-5 md:p-10">
+      <div className="w-full max-w-4xl p-5 md:p-10 md:py-16">
         <Tabs
           defaultValue="account"
           value={activeTab.value}

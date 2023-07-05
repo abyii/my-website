@@ -7,13 +7,13 @@ export default () => {
     <div className="w-full flex flex-col gap-5 min-h-screen">
       <Link href="/work/marvel">
         <Card className="h-min group">
-          <h2 className="font-medium group-hover:underline text-p-3 dark:text-p-8 group-hover:text-p-0 dark:group-hover:text-p-9 flex-1">
+          <h2 className="text-2xl group-hover:underline text-p-3 dark:text-p-8 group-hover:text-p-0 dark:group-hover:text-p-9 flex-1">
             Lessons from building a Product
           </h2>
         </Card>
       </Link>
       <Card className="h-min group">
-        <h2 className="font-medium group-hover:underline text-p-3 dark:text-p-8 group-hover:text-p-0 dark:group-hover:text-p-9 flex-1">
+        <h2 className="text-2xl group-hover:underline text-p-3 dark:text-p-8 group-hover:text-p-0 dark:group-hover:text-p-9 flex-1">
           Lessons from building a Design System
         </h2>
       </Card>

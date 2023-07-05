@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 # Marvel <span className="text-p-6 dark:text-p-5 font-normal" >• 2022</span>
 
 <div className="grid grid-cols-1 md:grid-cols-3 md:gap-16">
@@ -14,4 +16,170 @@
 
 ---
 
-[https://google.com](https://google.com)
+# Early Ideas
+
+When we were starting out, we didn't have a very clear idea on what the webapp was exactly supposed to do. But the basic idea was that _**students**_ would submit/showcase _**reports**_ on _**tasks**_ that they perform. And, These reports should be _**reviewed**_ by one of the _**coordinators**_. The tasks were divided into _**levels**_ and were part of a particular _**domain**_ of study. There were 5 domains of study at the time (IOT, Cloud Computing etc.,) and each domain would have a set of coordinators.
+
+I modelled the first iteration of the product around the keywords highlighted above. Some drawings I made to explore basic layout of some screens are shown below.
+
+<Image
+  src={"/marvel/early_ideas.jpg"}
+  alt="Early Ideas"
+  width="1000"
+  height="800"
+/>
+
+<div className="grid grid-cols-1 md:grid-cols-2 md:gap-16" >
+    <div>
+        ### Stack
+        {/* @prettier-ignore */}
+        And with that, I started building for the first release. I chose MERN stack with Azure CosmosDB (MongoDB API). Frontend was a React SPA that's fully rendered fully on the client-side (this was a mistake and we'll come back to it later). It was hosted on Azure Static Webapps (a CDN). The backend was an Express JS REST API that handled Authorization, and exposed the database. It was hosted on Azure App Service.
+
+        Other services like Cloudinary (for image hosting), Google OAuth, Sendinblue (for transactional emails), Microsoft Clarity (for analytics) were also used.
+    </div>
+
+    <div>
+        ### Why Azure?
+        {/* @prettier-ignore */}
+        Azure has a generous free tier, that best suited our estimated workloads at the time. And, having the database, backend, Frontend all under a single platform meant that we could conviniently manage all of them from a single portal. It worked very well for us. CDN was fast, database queries were almost instant. Features like continous backup and migration were available for free. Other features like budgeting and setting up alerts were very helpful.
+    </div>
+
+</div>
+
+A few Screenshots from the first version of the app are shown below.
+
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-1 my-5">
+  <Image
+    src={"/marvel/v1/dashboard.jpg"}
+    alt="Dashboard"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/v1/editor.jpg"}
+    alt="Editor"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/v1/profile.jpg"}
+    alt="Profile Page"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/v1/course.jpg"}
+    alt="Course Page"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/v1/course_edit.jpg"}
+    alt="Course Page in edit mode"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/v1/blog.jpg"}
+    alt="Article Page"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+</div>
+
+[react-markdown](https://www.npmjs.com/package/react-markdown) was used along with [sanitize-html](https://www.npmjs.com/package/sanitize-html) (to prevent XSS attacks) to render markdown with custom react components. HTML was allowed in markdown to let the users embed iframes from trusted sources. [react-query](https://tanstack.com/query/latest/docs/react/overview) was used to manage queries from the client side. Caching, Pagination, periodically refreshing queries, and programmatically invalidating specific queries, all that was super convinient with react-query.
+
+---
+
+# Problems and code debt
+
+<div className="grid grid-cols-1 md:grid-cols-3 md:gap-16">
+
+    The webapp worked very well. The lab quickly adopted it into it's programmes and the students found it intuitive to navigate the app and get stuff done. everybody was happy :).
+
+    But as the lab introduced new programmes, and changes to existing ones, the scope of the application grew, and adding new features along side the existing ones just didn't cut it.
+
+    Technical limitations from the stack that was being used and logical limitations from the way things were structured meant that we needed a massive re-write.
+
+</div>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-5">
+  <Image
+    src={"/marvel/quote1.jpg"}
+    alt="Dashboard"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+  <Image
+    src={"/marvel/quote2.jpg"}
+    alt="Editor"
+    width="1000"
+    height="800"
+    className="my-0"
+  />
+</div>
+
+It was time for us to take a hard look at the core problem we were trying to solve and simplify the product to its core essence. This meant that we needed a deeper understanding of what we actually wanted in the first place.
+
+---
+
+# A New Model
+
+After a few discussions with our stakeholders, we were able to simplify the problem and come to few conclusions.
+
+### What do the people in lab do?
+
+well, they do a lot of stuff but we can call all of that as some kind of _**work**_.
+
+### The idea of <span className="text-p-5" >work</span>
+
+- Work can be Collaborative. i.e more than one person can author a single project work or a course work.
+- Work should be Moderated, or Reviewed, or Criticised by a another person or another group of people.
+- Work moves in states and it cannot be in multiple states at once. Every major state must be documented separately. A course work for example, can have fixed number of states as required by the syllabus. But a project work can have any number of states because _a project is never finished_.
+
+This newly found abstraction had low barriers and high ceilings. It kept the simple things simple and made the complex things possible. People could be part of multiple works at the same time, irrespective of their roles. And, Roles and Permissions could be managed atomically at each atomic object, which is the _work_.
+
+---
+
+# Technical & Design changes
+
+<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-16">
+  <div>
+    ### Better DX and Maintainability.
+    {/* @prettier-ignore */}
+    We migrated to a Monorepo architecture ([Turborepo](https://turbo.build/))
+    that mainly housed our Webapp, [Storybook](https://storybook.js.org/) for
+    our Design System, and our UI library. We started adopting Typescript and
+    tools that worked well with Typescript, like
+    [Prisma](https://www.prisma.io/). and
+    [TailwindCSS](https://tailwindcss.com/) for styling. Modelling relations in
+    NoSQL is hard. It can make the database vulnerable to inconsistencies. So we
+    migrated to MySQL.
+  </div>
+  
+  <div>
+    ### Better SEO, Faster Loadtime, and Open Graph.
+    {/* @prettier-ignore */}
+    We migrated to Next.js 13. Parts of the UI that had content required for SEO
+    was rendred on the server and the interactive parts of the UI were rendered
+    on the client. This reduced the amount of client-side javascript and
+    improved performance. Features like Open Graph link previews were now
+    possible. We were able to dynamically generate and cache link preview images
+    on the fly for crawlers.
+  </div>
+
+  <div>
+    ### A new Design System.
+    {/* @prettier-ignore */}
+    We were previously using Material UI with slight customisation and it worked fine. But we had reached a stage where we needed more control over Design and Branding accross the apps. And, we needed components that supported SSR with Next.js 13 (with "use client" directive). So we built our own Design system with deliberate choice of primitives like type and color. Components were built with accessibility as a requirement using Adobe's [react-aria](https://react-spectrum.adobe.com/react-aria/). 
+  </div>
+</div>
+
+Screenshots of some of the screens from the new webapp are shown below.

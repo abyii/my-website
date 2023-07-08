@@ -7,6 +7,8 @@ import {
 } from "@abhyi/components/ui/Tabs";
 import { useReducer } from "react";
 import Showcase from "./TabContents/Showcase";
+import Writing from "./TabContents/Writing";
+import Photography from "./TabContents/Photography";
 
 const tabVals = ["Showcase", "Writing", "Photography"] as const;
 const directions = ["right", "left", "none"] as const;
@@ -79,14 +81,14 @@ export default () => {
             direction={activeTab.direction}
             magnitude={activeTab.magnitude}
           >
-            <Showcase />
+            <Writing />
           </TabsContent>
           <TabsContent
             value={tabVals[2]}
             direction={activeTab.direction}
             magnitude={activeTab.magnitude}
           >
-            <Showcase />
+            <Photography />
           </TabsContent>
         </Tabs>
       </div>

@@ -6,8 +6,8 @@ export default () => {
     >
       <div className="max-w-4xl w-full px-10 py-20 font-mono text-sm italic text-p-0 dark:text-p-9">
         <p>
-          <span className="not-italic font-semibold">ನಮಸ್ಕಾರ.</span> My name is
-          Abhishek, I'm a 20 y.o He/Him and I like crafting digital
+          {/* <span className="not-italic font-semibold">ನಮಸ್ಕಾರ.</span>  */}
+          My name is Abhishek, I'm a 20 y.o He/Him and I like crafting digital
           experiences!.
         </p>
         <p className="mt-5">

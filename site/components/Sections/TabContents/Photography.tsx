@@ -5,8 +5,8 @@ const Photography = () => {
   return (
     <div className="w-full flex justify-center p-5 text-p-5 min-h-[200px]">
       <span>
-        🪧 Work in progress. I'm curating a nice collection. I'll add them here
-        when I'm done. Meanwhile, you can check out&nbsp;
+        🪧 Work in progress. I&apos;m curating a nice collection. I&apos;ll add
+        them here when I&apos;m done. Meanwhile, you can check out&nbsp;
         <Link href={"/work/marvel"} className="font-semibold underline">
           something I wrote
         </Link>

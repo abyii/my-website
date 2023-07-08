@@ -46,7 +46,7 @@ const handleTabChange = (
   }
 };
 
-export default () => {
+const TabsStructure = () => {
   const [activeTab, setActiveTab] = useReducer(handleTabChange, {
     value: "Showcase",
     direction: "none",
@@ -95,3 +95,5 @@ export default () => {
     </div>
   );
 };
+
+export default TabsStructure;

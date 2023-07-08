@@ -1,4 +1,4 @@
-export default ({ ...props }: JSX.IntrinsicElements["svg"]) => {
+const GitHubIcon = ({ ...props }: JSX.IntrinsicElements["svg"]) => {
   return (
     <svg
       {...props}
@@ -15,3 +15,5 @@ export default ({ ...props }: JSX.IntrinsicElements["svg"]) => {
     </svg>
   );
 };
+
+export default GitHubIcon;

@@ -10,7 +10,7 @@ const ThisWebsite = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-16">
             <p>
               This is a simple website made by me. To showcase and write about
-              stuff that's also made by me.
+              stuff that&apos;s also made by me.
             </p>
             <p>
               A place on the internet with infinite creative freedom. Built with

@@ -1,6 +1,6 @@
 import SocialIconArray from "./SocialIconArray";
 
-export default () => {
+const Hero = () => {
   return (
     <div className="bg-p-9 dark:bg-p-1 w-full flex justify-center">
       {/* hero */}
@@ -25,3 +25,5 @@ export default () => {
     </div>
   );
 };
+
+export default Hero;

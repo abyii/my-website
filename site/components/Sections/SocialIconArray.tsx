@@ -5,7 +5,7 @@ import GitHubIcon from "../Icons/GitHubIcon";
 import TwitterIcon from "../Icons/TwitterIcon";
 import EmailIcon from "../Icons/EmailIcon";
 
-export default () => {
+const SocialIconArray = () => {
   return (
     <>
       <Link
@@ -34,3 +34,5 @@ export default () => {
     </>
   );
 };
+
+export default SocialIconArray;

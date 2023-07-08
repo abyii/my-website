@@ -2,7 +2,7 @@
 import { Card } from "@abhyi/components/ui";
 import Link from "next/link";
 
-export default () => {
+const Showcase = () => {
   return (
     <div className="w-full flex flex-col gap-5 min-h-[200px]">
       <Link href="/work/marvel">
@@ -20,3 +20,5 @@ export default () => {
     </div>
   );
 };
+
+export default Showcase;

@@ -21,7 +21,7 @@ const SocialIconArray = () => {
           <GitHubIcon className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
-      <Link target="_blank" href={"https://twitter.com/@_abhyi"}>
+      <Link target="_blank" href={"https://twitter.com/_abhyi"}>
         <IconButton variant="text">
           <TwitterIcon className="w-5 h-5 text-p-5" />
         </IconButton>

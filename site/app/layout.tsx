@@ -17,7 +17,7 @@ const mono = Spline_Sans_Mono({
 });
 
 export const metadata = {
-  title: "@abhyi",
+  title: "@abyi",
   description: "Developer and Designer based in Bengaluru.",
 };
 

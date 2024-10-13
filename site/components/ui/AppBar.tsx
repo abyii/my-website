@@ -19,7 +19,7 @@ export const AppBar: React.FC<JSX.IntrinsicElements["nav"]> = () => {
       >
         <Link href={"/"}>
           <h6 className="font-semibold text-lg text-p-5 dark:text-p-6 hover:text-p-1 dark:hover:text-p-9 transition-all duration-200 ease-out">
-            abhyi
+            abyi
           </h6>
         </Link>
 

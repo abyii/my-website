@@ -12,7 +12,7 @@ const Hero = () => {
         {/* name */}
         <h1 className="text-4xl font-light mt-12 md:mt-0">
           <span className="text-p-0 dark:text-p-9">Abhishek</span>
-          <span className="text-p-5">Y</span>
+          <span className="text-p-5">&nbsp;Y</span>
         </h1>
         {/* caption */}
         <p className="text-p-0 dark:text-p-10 self-end text-sm dark:font-light mt-[90px] md:mt-12">

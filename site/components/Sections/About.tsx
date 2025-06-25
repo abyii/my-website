@@ -6,24 +6,26 @@ const About = () => {
     >
       <div className="max-w-4xl w-full px-10 py-20 font-mono text-sm italic text-p-0 dark:text-p-9">
         <p>
-          {/* <span className="not-italic font-semibold">ನಮಸ್ಕಾರ.</span>  */}
-          My name is Abhishek, I&apos;m a 20 y.o He/Him and I like crafting
-          digital experiences!.
+          {/* <span className="not-italic font-semibold">ನಮಸ್ಕಾರ.</span> */}
+          My name is Abhishek, a He/Him passionate about building digital
+          experiences from the user-facing code down to the cloud infrastructure
+          that powers them.
         </p>
         <p className="mt-5">
-          Most of my experience so far has been in crafting for the Web.
-          I&apos;ve worked on building Design Systems, and Full-Stack apps. I
-          enjoy solving problems through Design and Code.
+          My work spans the full spectrum of software engineering, where I'm
+          equally intrigued by crafting elegant user interfaces and architecting
+          robust, scalable systems.
         </p>
         <p className="mt-5">
-          Some neat things i like using: Typescript, React, Monorepos, Next.js,
-          Prisma, Tailwind CSS, and Figma amoung others.
+          My core toolkit for cloud and DevOps includes: Python, Kubernetes,
+          AWS, OCI, Terraform, and Grafana. On the application side, I'm
+          proficient with TypeScript, React, and Next.js, a combination that
+          gives me a unique, end-to-end perspective on system architecture.
         </p>
         <p className="mt-5">
-          I like to guiltlessly explore passion and interests in fields that are
-          often unrelated. Typography, Layout Design, Visualizing data with
-          Python notebooks, 3D Modelling, and Sound Design are some of the
-          things that intrigue me.
+          I like to guiltlessly explore passions in fields that are often
+          unrelated. Typography, and Sound Design are some of the things that
+          intrigue me.
         </p>
       </div>
     </div>

@@ -16,12 +16,12 @@ const SocialIconArray = () => {
           <LinkedInLogo className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
-      <Link target="_blank" href={"https://github.com/abhishek-yanjarappa"}>
+      <Link target="_blank" href={"https://github.com/abyii"}>
         <IconButton variant="text">
           <GitHubIcon className="w-5 h-5 text-p-5" />
         </IconButton>
       </Link>
-      <Link target="_blank" href={"https://twitter.com/_abhyi"}>
+      <Link target="_blank" href={"https://twitter.com/abyi_me"}>
         <IconButton variant="text">
           <TwitterIcon className="w-5 h-5 text-p-5" />
         </IconButton>

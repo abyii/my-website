@@ -18,7 +18,7 @@ const mono = Spline_Sans_Mono({
 
 export const metadata = {
   title: "@abyi",
-  description: "Developer and Designer based in Bengaluru.",
+  description: "Cloud Engineer, and Software Developer based in Bengaluru.",
 };
 
 export default function RootLayout({
